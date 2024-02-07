@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wa"
+    android:orientation="vertical"
+    tools:context=".FirstPage">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/first_relative"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="3dp"
+        app:slideInterval="2500"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/first_relative"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/welcome">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="#c3d9fd"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/first_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Automatic Alert"
+                    android:textColor="@color/Alert_red"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/first_text"
+                    android:layout_alignParentStart="true"
+                    android:visibility="visible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_colorFilter="@color/teal_200"
+                    app:lottie_fileName="swipe-left.json"
+                    app:lottie_loop="true"
+                    tools:ignore="MissingConstraints"></com.airbnb.lottie.LottieAnimationView>
+                <!--                 <TextView -->
+                <!--                     android:id="@+id/second_text" -->
+                <!--                     android:layout_width="wrap_content" -->
+                <!--                     android:layout_height="wrap_content" --><!--                     android:text="Fast Alert" -->
+                <!--                     android:layout_alignParentEnd="true" -->
+                <!--                     android:layout_marginRight="10dp" -->
+                <!--                     android:textColor="@color/Alert_red" -->
+                <!--                     android:textSize="20dp" -->
+                <!--                     android:layout_below="@id/lottie" -->
+                <!--                     android:textStyle="italic"/> -->
+                <!--                 <com.airbnb.lottie.LottieAnimationView -->
+                <!--                     android:id="@+id/lottie1" -->
+                <!--                     android:layout_width="100dp" -->
+                <!--                     android:layout_height="90dp" -->
+                <!--                    android:layout_alignParentEnd="true" -->
+                <!--                     android:layout_below="@id/second_text" -->
+                <!--                     android:visibility="visible" -->
+                <!--                     app:lottie_autoPlay="true" -->
+                <!--                     app:lottie_colorFilter="@color/teal_200" -->
+                <!--                     app:lottie_fileName="swipe-right.json" -->
+                <!--                     app:lottie_loop="true" -->
+                <!--                     tools:ignore="MissingConstraints"> -->
+                <!--                 </com.airbnb.lottie.LottieAnimationView> -->
+                <TextView
+                    android:id="@+id/third_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lottie"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Nearby Locations"
+                    android:textColor="@color/Alert_red"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie3"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/third_text"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="visible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_colorFilter="@color/teal_200"
+                    app:lottie_fileName="swipe-up.json"
+                    app:lottie_loop="true"
+                    tools:ignore="MissingConstraints"></com.airbnb.lottie.LottieAnimationView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

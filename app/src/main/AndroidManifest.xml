@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.capstoneproject">
+    <!-- Normal Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Runtime Permissions -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".utils.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/alarm"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CustomActionBarTheme">
+        <activity
+            android:name=".NewSplashSOS.SOSSplash"
+            android:exported="false" />
+
+        <activity
+            android:name=".FirstPage"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBD8LLVm_-oMI5z64A81ZkYDmohy_ziEQ8" />
+        <!--
+        api from first project
+
+         AIzaSyDoijibOb-tuDkGfJu6D_fMG10h8A5Epyk
+
+         api using now
+         AIzaSyBD8LLVm_-oMI5z64A81ZkYDmohy_ziEQ8
+
+
+
+api taken form nearby church search
+         AIzaSyB9SXvLdo1FnKd8lcuVtvQaSx1tqqE_NFA
+        -->
+        <activity
+            android:name=".login_screen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".welcome_slide4"
+            android:exported="false"
+            android:theme="@style/welcome" />
+
+        <activity
+            android:name=".my_contact"
+            android:exported="false" />
+        <activity
+            android:name=".welcome_slide3"
+            android:exported="false"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".welcome_slide2"
+            android:exported="false"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".welcome_slide1"
+            android:exported="false"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".welcome_slide6"
+            android:exported="false"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".welcome_slide5"
+            android:exported="false"
+            android:theme="@style/welcome" />
+        <activity
+            android:name=".personal_info"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HomeScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:exported="false" />
+        <activity android:name=".ui.PlaceListActivity" />
+        <activity android:name=".ui.PlaceDetailActivity" />
+        <activity android:name=".ui.PlaceListOnMapActivity" />
+        <activity android:name=".ui.FavouritePlaceListActivity" />
+        <activity
+            android:name=".welcome"
+            android:exported="true"
+            android:theme="@style/welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".ui.PlaceSearchResultActivity" />
+        </activity>
+        <activity
+            android:name=".ui.PlaceSearchResultActivity"
+            android:exported="true">
+
+            <!-- to identify this activity as "searchable" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".contact_add"
+            android:exported="false"
+            android:label="Add Contact">
+            <intent-filter>
+                <action android:name="android.intent.action.contact_add" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact_edit"
+            android:exported="false"
+            android:label="Edit Contact">
+            <intent-filter>
+                <action android:name="android.intent.action.contact_edit" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tracking"
+            android:exported="false"
+            android:label="Tracking">
+            <intent-filter>
+                <action android:name="android.intent.action.tracking" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".myaccount"
+            android:exported="false"
+            android:label="My Account">
+            <intent-filter>
+                <action android:name="android.intent.action.myaccount" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".send_sms"
+            android:exported="false"
+            android:label="Send SMS">
+            <intent-filter>
+                <action android:name="android.intent.action.send_sms" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".SensorService"
+            android:exported="false" />
+        <service
+            android:name=".Notification.notification"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Location.BackgroundLocationService" />
+        <service android:name=".Location.BackgroundLocationService_Girls" />
+        <service android:name=".services.foreground_service" />
+
+        <provider
+            android:name=".data.PlaceDetailProvider"
+            android:authorities="com.example.capstoneproject"
+            android:exported="false" />
+
+        <receiver
+            android:name=".widget.PlaceDetailWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/location_detail_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".widget.PlaceDetailWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>
